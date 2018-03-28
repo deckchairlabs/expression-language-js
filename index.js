@@ -2,6 +2,10 @@ const { createExpressionEvaluator } = require('./src')
 
 const expressionEvaluator = createExpressionEvaluator()
 
-const result = expressionEvaluator('(1 + 11 + 7.8 - 4) / 2')
+const result = expressionEvaluator("'admin' in user.roles", {
+  user: {
+    roles: ['admin']
+  }
+})
 
 console.log(result)
